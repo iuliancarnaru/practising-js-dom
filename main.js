@@ -16,10 +16,12 @@ const winningScoreDisplay = document.querySelector('h2 span');
 const p1Dispaly = document.querySelector('#p1-display');
 const p2Dispaly = document.querySelector('#p2-display');
 
-numInput.addEventListener('change', () => {
-    winningScoreDisplay.textContent = numInput.value;
+
+// to use this keyword we have to change from arrow function to regular function (arrow functions don't have this keyword binded)
+numInput.addEventListener('change', function() {
+    winningScoreDisplay.textContent = this.value;
     // input is giving strings and we have to convert it to number
-    winningScore = Number(numInput.value);
+    winningScore = Number(this.value);
     reset();
 })
 
