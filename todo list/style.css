@@ -1,0 +1,15 @@
+body {
+    font-size: 25px;
+}
+
+ul {
+    list-style-type: decimal;
+}
+.done {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.selected {
+    color: green;
+}
