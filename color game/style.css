@@ -1,10 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: #232323;
+
 }
 
 header {
     color: #fff;
     text-align: center;
+    background-color: steelblue;
+    
 }
 
 #message {
@@ -13,7 +22,7 @@ header {
 }
 
 h1 {
-    padding: 20px;
+    padding: 30px;
 }
 
 #stripe {
