@@ -7,8 +7,19 @@ header {
     text-align: center;
 }
 
-header span {
+#message {
     font-size: 20px;
+    color: #000;
+}
+
+h1 {
+    padding: 20px;
+}
+
+#stripe {
+    background-color: #fff;
+    height: 50px;
+    text-align: center;
 }
 
 .container {
@@ -24,4 +35,8 @@ header span {
     padding-bottom: 30%;
     margin: 1.6%;
     border-radius: 15px;
+}
+
+.selected {
+    background-color: blue;
 }
