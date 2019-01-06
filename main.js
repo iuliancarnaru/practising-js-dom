@@ -19,6 +19,7 @@ p1Button.addEventListener('click', () => {
         p1Score++;
 
         if(p1Score === winningScore) {
+            p1Dispaly.classList.add('winner');
             gameOver = true;
         }
         p1Dispaly.textContent = p1Score;
@@ -31,6 +32,7 @@ p2Button.addEventListener('click', () => {
         p2Score++;
 
         if(p2Score === winningScore) {
+            p2Dispaly.classList.add('winner');
             gameOver = true;
         }
         p2Dispaly.textContent = p2Score;
