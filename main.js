@@ -1,19 +1,38 @@
 
+// initialize the variables that holds the score
 let p1Score = 0;
 let p2Score = 0;
+let gameOver = false;
+let winningScore = 5;
 
+// selectiong the buttons
 const p1Button = document.querySelector('#p1');
 const p2Button = document.getElementById('p2');
 
+// selecting the display spans
 const p1Dispaly = document.querySelector('#p1-display');
 const p2Dispaly = document.querySelector('#p2-display');
 
+// adding event listener to p1Button
 p1Button.addEventListener('click', () => {
-    p1Score++;
-    p1Dispaly.textContent = p1Score;
+    if (!gameOver) {
+        p1Score++;
+
+        if(p1Score === winningScore) {
+            gameOver = true;
+        }
+        p1Dispaly.textContent = p1Score;
+    }
 })
 
+// adding event listener to p2Button
 p2Button.addEventListener('click', () => {
-    p2Score++;
-    p2Dispaly.textContent = p2Score;
+    if (!gameOver) {
+        p2Score++;
+
+        if(p2Score === winningScore) {
+            gameOver = true;
+        }
+        p2Dispaly.textContent = p2Score;
+    }
 })
