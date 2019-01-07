@@ -1,12 +1,12 @@
-let numSquares = 6;
+const numSquares = 6;
 let colors = [];
 let pickedColor;
-let squares = document.querySelectorAll(".square");
-let colorDisplay = document.getElementById("colorDisplay");
-let messageDisplay = document.querySelector("#message");
-let h1 = document.querySelector("h1");
-let resetButton = document.querySelector("#reset");
-let modeButtons = document.querySelectorAll(".mode");
+const squares = document.querySelectorAll(".square");
+const colorDisplay = document.getElementById("colorDisplay");
+const messageDisplay = document.querySelector("#message");
+const h1 = document.querySelector("h1");
+const resetButton = document.querySelector("#reset");
+const modeButtons = document.querySelectorAll(".mode");
 
 
 init();
@@ -90,11 +90,11 @@ function pickColor(){
 
 function generateRandomColors(num){
 	//make an array
-	let arr = []
+	let arr = [];
 	//repeat num times
 	for(let i = 0; i < num; i++){
 		//get random color and push into arr
-		arr.push(randomColor())
+		arr.push(randomColor());
 	}
 	//return that array
 	return arr;
@@ -102,11 +102,11 @@ function generateRandomColors(num){
 
 function randomColor(){
 	//pick a "red" from 0 - 255
-	let r = Math.floor(Math.random() * 256);
+	let r = ~~(Math.random() * 256);
 	//pick a "green" from  0 -255
-	let g = Math.floor(Math.random() * 256);
+	let g = ~~(Math.random() * 256);
 	//pick a "blue" from  0 -255
-	let b = Math.floor(Math.random() * 256);
-	return "rgb(" + r + ", " + g + ", " + b + ")";
+	let b = ~~(Math.random() * 256);
+	return `rgb(${r}, ${g}, ${b})`;
 }
 
